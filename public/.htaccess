@@ -4,3 +4,10 @@ ForceType application/octet-stream
 Header set Content-Disposition attachment
 </FilesMatch>
 
+
+# Syllabus and redirect pages get edited mid-semester, and with no explicit
+# Cache-Control browsers apply heuristic freshness (~10% of the file's age),
+# which pinned the old "redirect to current semester" page for weeks.
+<FilesMatch "^index\.html$">
+Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
