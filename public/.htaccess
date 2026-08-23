@@ -1,0 +1,6 @@
+
+<FilesMatch ".(?i:doc|docx|xls|xlsx|ppt|pptx|odf|pdf|rtf|txt|ics)$">
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</FilesMatch>
+
