@@ -38,7 +38,7 @@
 <p><strong>Semester Overview: </strong>Throughout the semester, 13 lectures will be dedicated to discussing each one of the 13 selected research papers.&nbsp; Each paper is led by a panel of <strong>four</strong> students, who take four different roles, with follow-up questions from the rest of the class (<em>the questioners</em>).&nbsp; With four to a panel everybody has a distinct job and real time to speak.&nbsp; <strong>You will be on exactly one panel during the semester</strong>, so the rest of your participation grade comes from the reading questions and from discussion. These papers &amp; their respective dates are pre-scheduled &amp; can be seen in timeline schedule of the course structure.</p>
 <p><strong>Points Breakdown &amp; To Dos (50 Points): </strong></p>
 <ol>
-<li><em>Nightly Questions</em>: The night before each class that has an assigned paper, read the paper and submit a question on Canvas, with a sentence on why you think it matters.&nbsp; There are <strong>19</strong> such classes: the 13 led by student panels, and 6 more where Prof. Bau presents the paper himself (Rumelhart, Baydin, LeCun, Elman, Shao and Meng).&nbsp; Prof. Bau reads the questions and curates them: the ones a panel is well placed to answer go to the panel, and he keeps some for himself, so a nightly question is also a way to put something to the instructor directly.&nbsp; Each question earns 1 point, for a total of <strong>19 Points</strong>.&nbsp; A few days also list a second paper marked <em>also skim</em>.&nbsp; Everyone is expected to skim those too, closely enough to say what the paper claims and how it did it; Prof. Bau will lecture on them to set up the main reading, and they are fair game in class and on a quiz.&nbsp; Ask about whatever you actually want to know.&nbsp; The main reading is the obvious place to start, but a skim paper, the connection between the two, something from an earlier week, or something from outside the syllabus entirely are all fine.&nbsp; It is one question per class day, not one per paper, and a genuine question always beats a dutiful one.&nbsp; This is the part of your participation grade you work at all semester, so do not skip it.</li>
+<li><em>Nightly Questions</em>: The night before each class that has an assigned paper, read the paper and submit a question on Canvas, with a sentence on why you think it matters.&nbsp; There are <strong>19</strong> such classes: the 13 led by student panels, and 6 more where Prof. Bau presents the paper himself (Rumelhart, Baydin, LeCun, Elman, Vaswani and Shao).&nbsp; Prof. Bau reads the questions and curates them: the ones a panel is well placed to answer go to the panel, and he keeps some for himself, so a nightly question is also a way to put something to the instructor directly.&nbsp; Each question earns 1 point, for a total of <strong>19 Points</strong>.&nbsp; A few days also list a second paper marked <em>also skim</em>.&nbsp; Everyone is expected to skim those too, closely enough to say what the paper claims and how it did it; Prof. Bau will lecture on them to set up the main reading, and they are fair game in class and on a quiz.&nbsp; Ask about whatever you actually want to know.&nbsp; The main reading is the obvious place to start, but a skim paper, the connection between the two, something from an earlier week, or something from outside the syllabus entirely are all fine.&nbsp; It is one question per class day, not one per paper, and a genuine question always beats a dutiful one.&nbsp; This is the part of your participation grade you work at all semester, so do not skip it.</li>
 <li><em>In-Class Interactions:</em> Prof. Bau may randomly call on students during any lecture, be it a paper presentation or a standard class. Students earn points from being called on and from other active participation, including asking your question of the panel or of Prof. Bau; this is worth <strong>10 points.</strong></li>
 <li><em>Paper Presentation &amp; Review</em>: Once during the semester you will be assigned one of the four roles below, to review and present one aspect of a paper, which will let you read that paper from a particular angle.  This is collaborative work with the three other students on your panel, and requires a slide deck (more on that below). Leading this discussion well earns up to <strong>21 Points</strong>.</li>
 </ol>
@@ -79,6 +79,7 @@
 <tr><td><strong>Sohl-Dickstein 2015 (Diffusion)</strong></td><td>A single t slider from 0 to T: forward noising on the left, the reverse trajectory from a trained model on the right, and the alpha-bar schedule plotted underneath with the current t marked.  The insight: the two processes as mirror images, and the schedule as the object that ties them together.</td></tr>
 <tr><td><strong>Brown 2020 (GPT-3)</strong></td><td>Few-shot prompting with a small local model.  A box where you add in-context examples one at a time, with accuracy on a small task plotted live against the number of examples.  Alongside it, make the paper's own scaling curves interactive: slide model size and watch the zero-shot and few-shot gap.  This is one of the two papers whose real phenomenon needs more compute than a classroom has, so the right move is a scaled-down analogue plus the authors' published data.</td></tr>
 <tr><td><strong>Rafailov 2023 (DPO)</strong></td><td>A small preference sandbox.  Start with a handful of candidate responses and pairwise preferences over them, and fit a Bradley-Terry reward model live.  Then show the same preferences trained directly into a policy by the DPO loss, and plot the DPO <em>implicit</em> reward (<em>&beta;</em> log <em>&pi;</em>/<em>&pi;</em><sub>ref</sub>) against the explicitly fitted one.  The insight: the two rankings agreeing even though no reward model was ever trained in the second case, and then the <em>&beta;</em> slider pulling the policy away from the reference until it starts to hack the preferences.  Like GPT-3, this needs a toy scale to stay accurate.</td></tr>
+<tr><td><strong>Meng 2022 (ROME)</strong></td><td>A causal tracing grid.  Take a factual statement, corrupt the subject tokens, then restore one layer's hidden state at one token position at a time and plot the recovered probability of the correct answer as a heatmap over layer and position.  Then let the class edit a fact with a rank-one update and query the model before and after.  The insight: the mid-layer peak at the subject tokens in the heatmap, and a single localized edit changing one answer while leaving unrelated facts alone.</td></tr>
 <tr><td><strong>DeepSeek 2025 (R1, RLVR)</strong></td><td>Build on HW5.1's own tiny GRPO loop: sliders for the KL coefficient, the length penalty and the group size, plotting reward, the fraction of scratchpad-style answers, and a live sample of the model's outputs.  The insight: the reward-hacking result from the homework, reproduced in front of the room.</td></tr>
 </tbody>
 </table>
@@ -321,7 +322,7 @@
 <td>Tuesday, October 6, 2026</td>
 <td></td>
 <td>HW3, project signup</td>
-<td><strong>HW2 + Quiz 2</strong></td>
+<td></td>
 <td>Neural Language modeling</td>
 <td>david</td>
 <td><a href="https://papers.baulab.info/papers/Elman-1990.pdf" target="_blank" rel="noreferrer noopener"><span>Elman 1990 (RNNs)</span></a></td>
@@ -339,9 +340,9 @@
 <td>Tuesday, October 13, 2026</td>
 <td></td>
 <td></td>
-<td></td>
+<td><strong>HW2 + Quiz 2</strong></td>
 <td>Transformers</td>
-<td>presentation</td>
+<td>david</td>
 <td><a href="https://papers.baulab.info/papers/Vaswani-2017.pdf" target="_blank" rel="noreferrer noopener"><span>Vaswani 2017 (Transformers)</span></a></td>
 </tr>
 <tr>
@@ -357,7 +358,7 @@
 <td>Tuesday, October 20, 2026</td>
 <td></td>
 <td>HW4</td>
-<td><strong>HW3 + Quiz 3</strong></td>
+<td></td>
 <td>Midterm review</td>
 <td>david</td>
 <td></td>
@@ -375,7 +376,7 @@
 <td>Tuesday, October 27, 2026</td>
 <td></td>
 <td></td>
-<td></td>
+<td><strong>HW3 + Quiz 3</strong></td>
 <td>Image generation</td>
 <td>david</td>
 <td></td>
@@ -477,7 +478,7 @@
 <td></td>
 <td>Project reviews due</td>
 <td>Mechanistic interpretability</td>
-<td>david</td>
+<td>presentation</td>
 <td><a href="https://papers.baulab.info/papers/Meng-2022.pdf" target="_blank" rel="noreferrer noopener"><span>Meng 2022 (ROME)</span></a></td>
 </tr>
 <tr>
