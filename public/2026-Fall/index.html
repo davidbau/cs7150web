@@ -31,7 +31,7 @@
 <p><strong>Semester Overview: </strong>Throughout the semester, 13 lectures will be dedicated to discussing each one of the 13 selected research papers.&nbsp; Each paper is led by a panel of <strong>four</strong> students, who take four different roles, with follow-up questions from the rest of the class (<em>the questioners</em>).&nbsp; With four to a panel everybody has a distinct job and real time to speak.&nbsp; <strong>You will be on exactly one panel during the semester</strong>, so the rest of your participation grade comes from the reading questions and from discussion. These papers &amp; their respective dates are pre-scheduled &amp; can be seen in timeline schedule of the course structure.</p>
 <p><strong>Points Breakdown &amp; To Dos (50 Points): </strong></p>
 <ol>
-<li><em>Nightly Questions</em>: The night before each class that has an assigned paper, read the paper and submit a question on Canvas, with a sentence on why you think it matters.&nbsp; There are <strong>19</strong> such classes: the 13 led by student panels, and 6 more where Prof. Bau presents the paper himself (Rumelhart, Baydin, LeCun, Elman, Shao and Meng).&nbsp; On the panel days your question goes to the panel; on Prof. Bau's days it goes to him, which is your chance to interrogate the instructor rather than your classmates.&nbsp; Each question earns 1 point, for a total of <strong>19 Points</strong>.&nbsp; This is the part of your participation grade you work at all semester, so do not skip it.</li>
+<li><em>Nightly Questions</em>: The night before each class that has an assigned paper, read the paper and submit a question on Canvas, with a sentence on why you think it matters.&nbsp; There are <strong>19</strong> such classes: the 13 led by student panels, and 6 more where Prof. Bau presents the paper himself (Rumelhart, Baydin, LeCun, Elman, Shao and Meng).&nbsp; On the panel days your question goes to the panel; on Prof. Bau's days it goes to him, which is your chance to interrogate the instructor rather than your classmates.&nbsp; Each question earns 1 point, for a total of <strong>19 Points</strong>.&nbsp; A few days also list a <em>background</em> paper, which Prof. Bau presents himself to set up the main reading; those are worth reading but do not carry a question of their own.&nbsp; This is the part of your participation grade you work at all semester, so do not skip it.</li>
 <li><em>In-Class Interactions:</em> Prof. Bau may randomly call on students during any lecture, be it a paper presentation or a standard class. Students earn points from being called on and from other active participation, including asking your question of the panel or of Prof. Bau; this is worth <strong>10 points.</strong></li>
 <li><em>Paper Presentation &amp; Review</em>: Once during the semester you will be assigned one of the four roles below, to review and present one aspect of a paper, which will let you read that paper from a particular angle.  This is collaborative work with the three other students on your panel, and requires a slide deck (more on that below). Leading this discussion well earns up to <strong>21 Points</strong>.</li>
 </ol>
@@ -68,7 +68,7 @@
 <tr><td><strong>Dinh 2017 (Real NVP)</strong></td><td>A 2-D density warped by coupling layers, with a slider for how many layers have been applied and a toggle for the mask pattern, overlaying the running log-determinant.  The thing to make visible: an invertible warp building up one layer at a time, and what goes wrong when you stop alternating the mask, so one coordinate is never transformed.</td></tr>
 <tr><td><strong>Sohl-Dickstein 2015 (Diffusion)</strong></td><td>A single t slider from 0 to T: forward noising on the left, the reverse trajectory from a trained model on the right, and the alpha-bar schedule plotted underneath with the current t marked.  The thing to make visible: the two processes as mirror images, and the schedule as the object that ties them together.</td></tr>
 <tr><td><strong>Brown 2020 (GPT-3)</strong></td><td>Few-shot prompting with a small local model.  A box where you add in-context examples one at a time, with accuracy on a small task plotted live against the number of examples.  Alongside it, make the paper's own scaling curves interactive: slide model size and watch the zero-shot and few-shot gap.  This is one of the two papers whose real phenomenon needs more compute than a classroom has, so the honest move is a scaled-down analogue plus the authors' published data.</td></tr>
-<tr><td><strong>Ouyang 2022 (RLHF)</strong></td><td>A small preference sandbox: a handful of candidate responses with pairwise preferences, a Bradley-Terry reward model fitted live, then a policy optimizing that reward with a slider on the KL penalty.  The thing to make visible: reward climbing while the KL slider controls drift, and reward hacking appearing once the KL constraint is loosened.  Like GPT-3, this needs a toy scale to be honest.</td></tr>
+<tr><td><strong>Rafailov 2023 (DPO)</strong></td><td>A small preference sandbox.  Start with a handful of candidate responses and pairwise preferences over them, and fit a Bradley-Terry reward model live.  Then show the same preferences trained directly into a policy by the DPO loss, and plot the DPO <em>implicit</em> reward (<em>&beta;</em> log <em>&pi;</em>/<em>&pi;</em><sub>ref</sub>) against the explicitly fitted one.  The thing to make visible: the two rankings agreeing even though no reward model was ever trained in the second case, and then the <em>&beta;</em> slider pulling the policy away from the reference until it starts to hack the preferences.  Like GPT-3, this needs a toy scale to be honest.</td></tr>
 <tr><td><strong>DeepSeek 2025 (R1, RLVR)</strong></td><td>Build on HW5.1's own tiny GRPO loop: sliders for the KL coefficient, the length penalty and the group size, plotting reward, the fraction of scratchpad-style answers, and a live sample of the model's outputs.  The thing to make visible: the reward-hacking result from the homework, reproduced in front of the room.</td></tr>
 </tbody>
 </table>
@@ -158,7 +158,7 @@
 <ul>
 <li aria-level="1"><span>Metalearning</span></li>
 <li aria-level="1"><span>Prompting</span></li>
-<li aria-level="1"><span>Reinforcement learning from human feedback (RLHF)</span></li>
+<li aria-level="1"><span>Reinforcement learning from human feedback (RLHF), Bradley-Terry preference models, direct preference optimization (DPO)*</span></li>
 <li aria-level="1"><span>Reinforcement learning from verifiable rewards (RLVR), GRPO*</span></li>
 </ul>
 <p>Doing research</p>
@@ -417,9 +417,10 @@
 <td></td>
 <td></td>
 <td></td>
-<td>RLHF and DPO</td>
+<td>Preference learning: RLHF and DPO</td>
 <td>presentation</td>
-<td><a href="https://papers.baulab.info/papers/Ouyang-2022.pdf" target="_blank" rel="noreferrer noopener"><span>Ouyang 2022 (RLHF)</span></a></td>
+<td><a href="https://papers.baulab.info/papers/also/Rafailov-2023.pdf" target="_blank" rel="noreferrer noopener"><span>Rafailov 2023 (DPO)</span></a><br />
+<em>background (Prof. Bau):</em> <a href="https://papers.baulab.info/papers/Ouyang-2022.pdf" target="_blank" rel="noreferrer noopener"><span>Ouyang 2022 (RLHF)</span></a></td>
 </tr>
 <tr>
 <td>Thursday, November 19, 2026</td>
