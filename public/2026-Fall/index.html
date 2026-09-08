@@ -71,7 +71,7 @@
 <td>Thursday, September 17, 2026</td>
 <td></td>
 <td></td>
-<td><strong>HW1 + Quiz 1</strong></td>
+<td></td>
 <td>Classification and backpropagation</td>
 <td>david</td>
 <td><a href="https://papers.baulab.info/papers/also/Baydin-2018.pdf" target="_blank" rel="noreferrer noopener"><span>Baydin 2018 (Autodiff survey)</span></a></td>
@@ -80,9 +80,9 @@
 <td>Tuesday, September 22, 2026</td>
 <td>Last day to add/drop</td>
 <td>HW2</td>
-<td></td>
+<td><strong>HW1 + Quiz 1</strong></td>
 <td>Optimization and deep networks</td>
-<td>presentation</td>
+<td>david</td>
 <td><a href="https://papers.baulab.info/papers/Kingma-2015.pdf" target="_blank" rel="noreferrer noopener"><span>Kingma 2015 (ADAM)</span></a></td>
 </tr>
 <tr>
@@ -96,11 +96,11 @@
 </tr>
 <tr>
 <td>Tuesday, September 29, 2026</td>
-<td>Guest lecture by Grace Proebsting</td>
+<td>Prof. Bau away; Grace Proebsting hosts</td>
 <td></td>
 <td></td>
 <td>Equivariances and convolutions</td>
-<td>grace</td>
+<td>presentation</td>
 <td><a href="https://papers.baulab.info/papers/LeCun-1989.pdf" target="_blank" rel="noreferrer noopener"><span>LeCun 1989 (LeNet)</span></a></td>
 </tr>
 <tr>
@@ -344,8 +344,7 @@
 <table border="1" cellspacing="0" cellpadding="4">
 <tbody>
 <tr><td><strong>Paper</strong></td><td><strong>An interactive visualization that could be insightful</strong></td></tr>
-<tr><td><strong>Kingma 2015 (ADAM)</strong></td><td>A contour plot of an ill-conditioned 2-D loss such as 10<em>x</em><sup>2</sup> + <em>y</em><sup>2</sup>, with the optimizer's path drawn on it.  Sliders for learning rate, beta-1 and beta-2, and a switch between plain SGD, momentum, RMSProp and ADAM.  A second panel showing the running m and v for each coordinate.  The insight: why per-coordinate normalization straightens out the zig-zag, and how large a learning rate ADAM survives before it diverges.</td></tr>
-<tr><td><strong>Glorot 2010 (initialization)</strong></td><td>A 30-layer MLP with a slider for the initial weight scale and a dropdown for tanh, sigmoid or ReLU.  Show the activation histogram at every layer as a strip across depth, plus the gradient norm per layer.  The insight: slide the scale and watch activations collapse toward zero or saturate, and see that the Xavier and Kaiming values are exactly where the variance stays flat with depth.</td></tr>
+<tr><td><strong>Glorot 2010 (initialization)</strong></td><td>A 30-layer MLP with a slider for the initial weight scale and a dropdown for tanh, sigmoid or ReLU.  Show the activation histogram at every layer as a strip across depth, plus the gradient norm per layer.  The insight: slide the scale and watch activations collapse toward zero or saturate, and see that the Xavier and Kaiming values are exactly where the variance stays flat with depth.</td></tr><tr><td><strong>LeCun 1989 (LeNet)</strong></td><td>A canvas where the class draws a digit, feeding a small LeNet, with every convolutional feature map shown live as the stroke is drawn. Add a slider that shifts, scales and rotates the drawn digit while the prediction and the maps update. The insight: what a convolution and a pooling layer actually compute on a real input, and that tolerance to a shift is built into the architecture while tolerance to a rotation is not.</td></tr>
 <tr><td><strong>He 2016 (ResNet)</strong></td><td>Two networks side by side, plain and residual, with a depth slider from 2 to 60 layers.  Plot the gradient norm arriving at each layer, and a short training curve for each.  The insight: the plain network's gradient decays geometrically with depth while the residual one stays flat, and the plain network's <em>training</em> error gets worse as it gets deeper, which is the paper's actual headline.</td></tr>
 <tr><td><strong>Cho 2014 (GRUs)</strong></td><td>A single GRU cell with sliders for the input, the previous hidden state, and the reset and update gate pre-activations, showing r, z, the candidate and the new h as bars.  Then a long sequence with one thing that has to be remembered, and a slider on the update-gate bias.  The insight: how many steps a memory survives as you open and close the gate.  (HW3 has a widget close to this to start from.)</td></tr>
 <tr><td><strong>Vaswani 2017 (Transformers)</strong></td><td>Type a sentence and see the attention matrix of a small pretrained model, per head and layer; click a token to see what it attends to.  A switch to zero out the positional embeddings.  The insight: different heads doing visibly different jobs, and the structure collapsing when position information is removed.</td></tr>
@@ -376,7 +375,7 @@
 <p><span><strong>Homework quizzes: 50 points.</strong></span><span> Five short quizzes, 10 points each, taken in class.</span></p>
 <p><span>There is one homework quiz per homework assignment, and <strong>each quiz is given in class on the day that homework is due</strong> (the dates are in the schedule above). Those days are deliberately days without a student paper presentation, so that the class is not carrying two things at once. Each quiz tests your knowledge of the methods and concepts in that homework. The quizzes are designed to be much easier for you if you have actually worked through and understood the homework yourself, so the best preparation for a quiz is to do the homework yourself. This is where the real incentive to keep up with the homework lies: handing the homework in is worth 1 point, but its quiz is worth 10.</span></p>
 <p><span><strong>Quiz 3 is on October 20, two days before the midterm.</strong> HW3 covers recurrent networks, gating and attention, which are on the midterm, so doing it is part of preparing for the exam. That class is the midterm review, and the discussion before the quiz is where to bring your questions.</span></p>
-<p><span><strong>Quiz 1 is on September 17, before the September 22 add/drop deadline.</strong> HW1 is short and goes out on the first day, so by the deadline you will have done one homework and one quiz. Use them to decide whether to stay in the course.</span></p>
+<p><span><strong>HW1 is due and Quiz 1 is given on September 22, which is also the add/drop deadline.</strong> HW1 goes out on the first day of class, so by the deadline you will have worked through a homework and sat a quiz on it. That is the clearest sense of the course you can get while you can still act on it.</span></p>
 <p><span>On each of those five days we will open the class with about ten minutes of informal discussion of the homework, before the quiz. Bring your questions. If that discussion happens to give away the answer to something on the quiz, so be it &mdash; that is a reward for being in the room and paying attention.</span></p>
 <p><span><strong>Quizzes must be taken in person</strong>, in class on their scheduled day, to earn points. There is no remote or online version.</span></p>
 <p><span>Each quiz is worth 10 points, and whether a quiz counts is decided as follows:</span></p>
