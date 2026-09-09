@@ -143,6 +143,7 @@ td { vertical-align: top; }
   background: var(--panel);
   border-top: 0;
   border-bottom: 2px solid var(--rule);
+  box-shadow: 0 1px 0 var(--rule);
   font-weight: 650;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
@@ -161,8 +162,9 @@ td { vertical-align: top; }
 .schedule tr.milestone td,
 .schedule tr.milestone:nth-child(even) td {
   background: var(--accent-bg);
-  box-shadow: inset 3px 0 0 var(--accent);
 }
+/* one rule down the left edge of the row, not one per cell */
+.schedule tr.milestone td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 .schedule tr.milestone td:nth-child(4) { color: var(--accent); font-weight: 650; }
 
 /* a student-led discussion */
@@ -209,7 +211,7 @@ td { vertical-align: top; }
   /* let the wide tables scroll on their own rather than the whole page */
   .schedule, .demos { display: block; overflow-x: auto; }
   .schedule { font-size: 0.8rem; }
-  .schedule tr:first-child td { position: static; }
+  .schedule tr:first-child td { position: static; box-shadow: none; }
   .topicmap, .topicmap > tbody, .topicmap > tbody > tr, .topicmap > tbody > tr > td {
     display: block; width: auto; padding: 0 !important;
   }
